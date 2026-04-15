@@ -142,7 +142,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         console.log("=== Your Form Data Submitted ===");
-        console.log(finalData);
+        console.log("Raw object:", finalData);
+        console.log("JSON string:\n" + JSON.stringify(finalData, null, 2));
         alert("Form saved successfully!");
     });
 });
