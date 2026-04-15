@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    padding: 32px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#creator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Card General Style */
+.card {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    padding: 16px 24px;
+}
+
+/* -----------------------------
+   Top Section: Toggles 
+-------------------------------- */
+.toggle-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.toggle-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Custom Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e5e7eb;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+input:checked + .slider {
+    background-color: #f43f5e; /* Red color matching the screenshot */
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+/* -----------------------------
+   Managed By Section 
+-------------------------------- */
+.managed-by-section {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+.section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.radio-group {
+    display: flex;
+    gap: 24px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #777;
+    cursor: pointer;
+}
+
+/* Custom Radio */
+.radio-label input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fca5a5;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.radio-label input[type="radio"]:checked {
+    border-color: #f43f5e;
+}
+
+.radio-label input[type="radio"]:checked::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #f43f5e;
+    border-radius: 50%;
+    display: block;
+}
+
+/* -----------------------------
+   Contact Details Section 
+-------------------------------- */
+.contact-details-section {
+    padding-top: 0; /* Handled by header inner padding */
+}
+
+.section-header {
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0 -24px 24px -24px;
+    padding: 16px 24px 0 24px;
+}
+
+.contact-title {
+    font-size: 13px;
+    color: #f43f5e;
+    font-weight: 500;
+    display: inline-block;
+    padding-bottom: 12px;
+    position: relative;
+    margin-bottom: -1px;
+    border-bottom: 2px solid #f43f5e;
+}
+
+/* Form Grid */
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 24px;
+    column-gap: 32px;
+    padding-bottom: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 11px;
+    color: #888;
+    font-weight: 500;
+}
+
+.form-group .required {
+    color: #f43f5e;
+}
+
+/* Inputs and Selects */
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #333;
+    outline: none;
+    background-color: #fcfcfc;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.phone-input:focus-within {
+    border-color: #cbd5e1;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #ccc;
+}
+
+/* Phone Input Special Styling */
+.phone-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #e5e7eb;
+}
+
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 26px 10px 14px;
+    color: #444;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    width: auto;
+    min-width: 95px;
+    flex-shrink: 0;
+    z-index: 1; /* Select underneath the arrow */
+}
+
+.select-wrapper .select-arrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 2; /* Arrow on top of the select */
+    color: #888;
+}
+
+.phone-input input {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border-radius: 0;
+    flex-grow: 1;
+}
+
+.full-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.full-select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+}
+
+.full-select-wrapper .select-arrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* -----------------------------
+   Submit Button 
+-------------------------------- */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.submit-btn {
+    background-color: transparent;
+    color: #f43f5e;
+    border: 1px solid #fecdd3;
+    border-radius: 20px;
+    padding: 8px 32px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #fff1f2;
+    border-color: #fda4af;
+}
+
+/* -----------------------------
+   Responsiveness
+-------------------------------- */
+@media (max-width: 900px) {
+    .grid-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .grid-form {
+        grid-template-columns: 1fr;
+    }
+    .toggle-section {
+        gap: 20px;
+    }
+    .managed-by-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}

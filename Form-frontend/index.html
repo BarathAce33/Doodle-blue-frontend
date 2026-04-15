@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hidden SVG Symbols for reuse -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-chevron" viewBox="0 0 10 6">
+            <polyline points="1 1 5 5 9 1" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+    </svg>
+
+    <div class="form-container">
+        <form id="creator-form">
+            
+            <!-- Top Section: Toggles -->
+            <div class="card toggle-section">
+                <div class="toggle-group">
+                    <label class="toggle-label">Public Figure</label>
+                    <label class="switch">
+                        <input type="checkbox" name="publicFigure" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="toggle-group">
+                    <label class="toggle-label">Animeta Verified</label>
+                    <label class="switch">
+                        <input type="checkbox" name="animetaVerified">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="toggle-group">
+                    <label class="toggle-label">Ani App Onboarded</label>
+                    <label class="switch">
+                        <input type="checkbox" name="aniAppOnboarded">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="toggle-group">
+                    <label class="toggle-label">Delist Creator</label>
+                    <label class="switch">
+                        <input type="checkbox" name="delistCreator">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Managed By Section -->
+            <div class="card managed-by-section">
+                <span class="section-title">Managed By</span>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="managedBy" value="Self">
+                        Self
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="managedBy" value="Agency">
+                        Agency
+                    </label>
+                </div>
+            </div>
+
+            <!-- Contact Details Section -->
+            <div class="card contact-details-section">
+                <div class="section-header">
+                    <h3 class="contact-title">Contact Details</h3>
+                </div>
+                <div class="grid-form">
+                    
+                    <div class="form-group">
+                        <label>Creator Full Name <span class="required">*</span></label>
+                        <input type="text" name="creatorFullName" value="Narendra Modi" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Instagram Handle</label>
+                        <input type="text" name="instagramHandle" value="narendramodi">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Creator Type</label>
+                        <div class="full-select-wrapper">
+                            <select name="creatorType">
+                                <option value="" disabled>Select</option>
+                                <option value="Male" selected>Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group phone-group">
+                        <label>Direct Mobile Number</label>
+                        <div class="phone-input">
+                            <div class="select-wrapper">
+                                <select name="directMobileCountryCode" id="directMobileCountryCode">
+                                </select>
+                                <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                            </div>
+                            <input type="tel" name="directMobileNumber" placeholder="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Creator Email</label>
+                        <input type="email" name="creatorEmail" placeholder="Enter">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Contact POC Name (If Other Than Creator)</label>
+                        <input type="text" name="pocName" placeholder="Enter">
+                    </div>
+                    
+                    <div class="form-group phone-group">
+                        <label>POC Mobile Number</label>
+                        <div class="phone-input">
+                            <div class="select-wrapper">
+                                <select name="pocMobileCountryCode" id="pocMobileCountryCode">
+                                </select>
+                                <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                            </div>
+                            <input type="tel" name="pocMobileNumber" placeholder="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>POC Email ID</label>
+                        <input type="email" name="pocEmail" placeholder="Enter">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Relationship</label>
+                        <input type="text" name="relationship" placeholder="Enter">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>City</label>
+                        <div class="full-select-wrapper">
+                            <select name="city" id="cityDropdown" disabled>
+                                <option value="" disabled selected>Select City</option>
+                            </select>
+                            <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>State</label>
+                        <div class="full-select-wrapper">
+                            <select name="state" id="stateDropdown" disabled>
+                                <option value="" disabled selected>Select State</option>
+                            </select>
+                            <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Country</label>
+                        <div class="full-select-wrapper">
+                            <select name="country" id="countryDropdown">
+                                <option value="" disabled selected>Select Country</option>
+                            </select>
+                            <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="btn-container">
+                <button type="submit" class="submit-btn" id="saveBtn">Save As Draft</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
