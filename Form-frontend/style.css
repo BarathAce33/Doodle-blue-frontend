@@ -26,17 +26,13 @@ body {
     gap: 16px;
 }
 
-/* Card General Style */
 .card {
     background: #ffffff;
     border: 1px solid #ebebeb;
     border-radius: 8px;
-    padding: 16px 24px;
+    padding: 16px 24px;   
 }
 
-/* -----------------------------
-   Top Section: Toggles 
--------------------------------- */
 .toggle-section {
     display: flex;
     align-items: center;
@@ -56,7 +52,6 @@ body {
     color: #444;
 }
 
-/* Custom Toggle Switch */
 .switch {
     position: relative;
     display: inline-block;
@@ -73,10 +68,7 @@ body {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-color: #e5e7eb;
     transition: 0.3s;
     border-radius: 20px;
@@ -96,16 +88,13 @@ body {
 }
 
 input:checked + .slider {
-    background-color: #f43f5e; /* Red color matching the screenshot */
+    background-color: #f43f5e; 
 }
 
 input:checked + .slider:before {
     transform: translateX(16px);
 }
 
-/* -----------------------------
-   Managed By Section 
--------------------------------- */
 .managed-by-section {
     display: flex;
     align-items: center;
@@ -132,7 +121,6 @@ input:checked + .slider:before {
     cursor: pointer;
 }
 
-/* Custom Radio */
 .radio-label input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
@@ -162,11 +150,8 @@ input:checked + .slider:before {
     display: block;
 }
 
-/* -----------------------------
-   Contact Details Section 
--------------------------------- */
 .contact-details-section {
-    padding-top: 0; /* Handled by header inner padding */
+    padding-top: 0;
 }
 
 .section-header {
@@ -181,12 +166,10 @@ input:checked + .slider:before {
     font-weight: 500;
     display: inline-block;
     padding-bottom: 12px;
-    position: relative;
     margin-bottom: -1px;
     border-bottom: 2px solid #f43f5e;
 }
 
-/* Form Grid */
 .grid-form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -211,7 +194,6 @@ input:checked + .slider:before {
     color: #f43f5e;
 }
 
-/* Inputs and Selects */
 .form-group input, 
 .form-group select {
     width: 100%;
@@ -231,14 +213,13 @@ input:checked + .slider:before {
 .phone-input:focus-within {
     border-color: #cbd5e1;
     background-color: #fff;
-    box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.1);
+    box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.1); 
 }
 
 .form-group input::placeholder {
     color: #ccc;
 }
 
-/* Phone Input Special Styling */
 .phone-input {
     display: flex;
     align-items: center;
@@ -270,7 +251,7 @@ input:checked + .slider:before {
     width: auto;
     min-width: 95px;
     flex-shrink: 0;
-    z-index: 1; /* Select underneath the arrow */
+    z-index: 1;
 }
 
 .select-wrapper .select-arrow {
@@ -279,7 +260,7 @@ input:checked + .slider:before {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-    z-index: 2; /* Arrow on top of the select */
+    z-index: 2; 
     color: #888;
 }
 
@@ -310,9 +291,6 @@ input:checked + .slider:before {
     pointer-events: none;
 }
 
-/* -----------------------------
-   Submit Button 
--------------------------------- */
 .btn-container {
     display: flex;
     justify-content: center;
@@ -338,14 +316,12 @@ input:checked + .slider:before {
     border-color: #fda4af;
 }
 
-/* -----------------------------
-   Responsiveness
--------------------------------- */
 @media (max-width: 900px) {
     .grid-form {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 600px) {
     .grid-form {
         grid-template-columns: 1fr;

@@ -8,18 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Hidden SVG Symbols for reuse -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="icon-chevron" viewBox="0 0 10 6">
-            <polyline points="1 1 5 5 9 1" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </symbol>
-    </svg>
-
     <div class="form-container">
+        
         <form id="creator-form">
             
-            <!-- Top Section: Toggles -->
             <div class="card toggle-section">
+                
                 <div class="toggle-group">
                     <label class="toggle-label">Public Figure</label>
                     <label class="switch">
@@ -27,6 +21,7 @@
                         <span class="slider round"></span>
                     </label>
                 </div>
+                
                 <div class="toggle-group">
                     <label class="toggle-label">Animeta Verified</label>
                     <label class="switch">
@@ -34,6 +29,7 @@
                         <span class="slider round"></span>
                     </label>
                 </div>
+                
                 <div class="toggle-group">
                     <label class="toggle-label">Ani App Onboarded</label>
                     <label class="switch">
@@ -41,6 +37,7 @@
                         <span class="slider round"></span>
                     </label>
                 </div>
+                
                 <div class="toggle-group">
                     <label class="toggle-label">Delist Creator</label>
                     <label class="switch">
@@ -48,16 +45,18 @@
                         <span class="slider round"></span>
                     </label>
                 </div>
+                
             </div>
 
-            <!-- Managed By Section -->
             <div class="card managed-by-section">
                 <span class="section-title">Managed By</span>
+                
                 <div class="radio-group">
                     <label class="radio-label">
                         <input type="radio" name="managedBy" value="Self">
                         Self
                     </label>
+                    
                     <label class="radio-label">
                         <input type="radio" name="managedBy" value="Agency">
                         Agency
@@ -65,11 +64,12 @@
                 </div>
             </div>
 
-            <!-- Contact Details Section -->
             <div class="card contact-details-section">
+                
                 <div class="section-header">
                     <h3 class="contact-title">Contact Details</h3>
                 </div>
+                
                 <div class="grid-form">
                     
                     <div class="form-group">
@@ -91,7 +91,9 @@
                                 <option value="Female">Female</option>
                                 <option value="Other">Other</option>
                             </select>
-                            <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                            <svg class="select-arrow" width="10" height="6" viewBox="0 0 10 6">
+                                <polyline points="1 1 5 5 9 1" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                     </div>
                     
@@ -101,7 +103,9 @@
                             <div class="select-wrapper">
                                 <select name="directMobileCountryCode" id="directMobileCountryCode">
                                 </select>
-                                <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                                <svg class="select-arrow" width="10" height="6" viewBox="0 0 10 6">
+                                    <polyline points="1 1 5 5 9 1" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </div>
                             <input type="tel" name="directMobileNumber" placeholder="">
                         </div>
@@ -123,7 +127,9 @@
                             <div class="select-wrapper">
                                 <select name="pocMobileCountryCode" id="pocMobileCountryCode">
                                 </select>
-                                <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                                <svg class="select-arrow" width="10" height="6" viewBox="0 0 10 6">
+                                    <polyline points="1 1 5 5 9 1" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </div>
                             <input type="tel" name="pocMobileNumber" placeholder="">
                         </div>
@@ -145,7 +151,9 @@
                             <select name="city" id="cityDropdown" disabled>
                                 <option value="" disabled selected>Select City</option>
                             </select>
-                            <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                            <svg class="select-arrow" width="10" height="6" viewBox="0 0 10 6">
+                                <polyline points="1 1 5 5 9 1" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                     </div>
 
@@ -155,7 +163,9 @@
                             <select name="state" id="stateDropdown" disabled>
                                 <option value="" disabled selected>Select State</option>
                             </select>
-                            <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                            <svg class="select-arrow" width="10" height="6" viewBox="0 0 10 6">
+                                <polyline points="1 1 5 5 9 1" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                     </div>
                     
@@ -165,14 +175,15 @@
                             <select name="country" id="countryDropdown">
                                 <option value="" disabled selected>Select Country</option>
                             </select>
-                            <svg class="select-arrow" width="10" height="6"><use href="#icon-chevron"></use></svg>
+                            <svg class="select-arrow" width="10" height="6" viewBox="0 0 10 6">
+                                <polyline points="1 1 5 5 9 1" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <!-- Submit Button -->
             <div class="btn-container">
                 <button type="submit" class="submit-btn" id="saveBtn">Save As Draft</button>
             </div>
